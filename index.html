@@ -135,6 +135,22 @@
       border: none;
       text-decoration: none !important;
     }
+    .hero-copy-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+      max-width: 520px;
+      margin-bottom: 2rem;
+    }
+    .hero-copy-row p {
+      margin-bottom: 0;
+      flex: 1;
+    }
+    .hero-strix-wrap img {
+      width: 150px;
+      height: auto;
+      display: block;
+    }
     .btn-primary { background: var(--accent); color: #fff; }
     .btn-primary:hover { background: var(--accent-h); }
     .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
@@ -337,7 +353,15 @@
 <div class="hero">
   <div>
 <h1>Never let a <span>certificate expire</span> again.</h1>
-    <p>TLSentinel monitors your TLS certificates across every host, alerts you before they expire, and gives you a clear view of your infrastructure's certificate health.</p>
+  <div class="hero-copy-row">
+  <div class="hero-strix-wrap">
+    <img src="assets/strix.png" alt="" />
+  </div>  
+  <p>
+    TLSentinel monitors your TLS certificates across every host, alerts you before they expire,
+    and gives you a clear view of your infrastructure's certificate health.
+  </p>
+</div>
     <div class="hero-actions">
       <a class="btn btn-primary" href="https://github.com/tlsentinel/tlsentinel-server" target="_blank" rel="noopener">Get Started</a>
       <a class="btn btn-outline" href="https://github.com/tlsentinel/tlsentinel-server#readme" target="_blank" rel="noopener">Read the Docs</a>
