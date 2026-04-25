@@ -277,7 +277,8 @@
       border-bottom: 1px solid var(--border);
     }
     .feature-item:last-child { border-bottom: none; }
-    .feature-glyph { font-size: 1.25rem; line-height: 1.4; }
+    .feature-glyph { color: var(--accent); display: flex; align-items: center; height: 1.5rem; }
+    .feature-glyph svg { width: 22px; height: 22px; display: block; }
     .feature-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
     .feature-desc  { font-size: 0.9375rem; color: var(--muted); line-height: 1.6; margin: 0; }
 
@@ -393,42 +394,42 @@
     <h2 class="section-title">Everything you need, in one place.</h2>
     <div class="features-list">
       <div class="feature-item">
-        <div class="feature-glyph">🌐</div>
+        <div class="feature-glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"/><path d="M4 6h.01"/><path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"/><path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"/><path d="M12 18h.01"/><path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"/><circle cx="12" cy="12" r="2"/><path d="m13.41 10.59 5.66-5.66"/></svg></div>
         <div>
           <div class="feature-title">Distributed Scanner Agents</div>
           <p class="feature-desc">Reach servers behind firewalls, on private networks, and in isolated environments. The scanner runs where you do.</p>
         </div>
       </div>
       <div class="feature-item">
-        <div class="feature-glyph">🔔</div>
+        <div class="feature-glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg></div>
         <div>
           <div class="feature-title">Email Alerts</div>
           <p class="feature-desc">Get warned before any certificate expires, with enough time to do something about it.</p>
         </div>
       </div>
       <div class="feature-item">
-        <div class="feature-glyph">🛡️</div>
+        <div class="feature-glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
         <div>
           <div class="feature-title">Security Posture Grading</div>
           <p class="feature-desc">Each server gets a letter grade for its security configuration. Spot weak settings before they become incidents.</p>
         </div>
       </div>
       <div class="feature-item">
-        <div class="feature-glyph">🔐</div>
+        <div class="feature-glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></svg></div>
         <div>
           <div class="feature-title">Single Sign-On</div>
           <p class="feature-desc">Sign in with Entra ID, Google, Okta, or any OIDC provider. Local accounts work too. Role-based access controls who can manage vs. who can only view.</p>
         </div>
       </div>
       <div class="feature-item">
-        <div class="feature-glyph">📜</div>
+        <div class="feature-glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></svg></div>
         <div>
           <div class="feature-title">Full Certificate Inventory</div>
           <p class="feature-desc">Every certificate you've ever seen, with full history. Answer "what changed, when, and on which server" months later.</p>
         </div>
       </div>
       <div class="feature-item">
-        <div class="feature-glyph">🔌</div>
+        <div class="feature-glyph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2"/><path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"/><path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8"/></svg></div>
         <div>
           <div class="feature-title">REST API</div>
           <p class="feature-desc">Everything in the dashboard is also available through the API. Add servers, query status, integrate with your tooling.</p>
