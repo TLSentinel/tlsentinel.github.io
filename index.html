@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TLSentinel — TLS Certificate Monitoring</title>
-  <meta name="description" content="Self-hosted TLS certificate monitoring. Track expiry, get alerted before certificates expire, and manage your infrastructure from a clean dashboard." />
+  <title>TLSentinel — Free, Self-Hosted SSL Certificate Monitoring</title>
+  <meta name="description" content="Free, self-hosted SSL certificate monitoring. Track every certificate expiration across your company — internal, private, or public — and grade the security of every endpoint." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -120,6 +120,15 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 3rem;
+    }
+    .hero-kicker {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
     }
     .hero h1 {
       font-size: clamp(2rem, 4vw, 2.75rem);
@@ -257,27 +266,20 @@
     }
     .section-sub { color: var(--muted); font-size: 1rem; max-width: 560px; margin-bottom: 3rem; }
 
-    /* ── Feature cards ── */
-    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-    .feature-card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: border-color 0.2s;
+    /* ── Features list ── */
+    .features-list { max-width: 760px; margin: 0 auto; }
+    .feature-item {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 1.25rem;
+      align-items: start;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
     }
-    .feature-card:hover { border-color: var(--accent); }
-    .feature-icon {
-      width: 40px; height: 40px;
-      background: rgba(37, 99, 235, 0.07);
-      border: 1px solid rgba(37, 99, 235, 0.18);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.125rem;
-      margin-bottom: 1rem;
-    }
-    .feature-title { font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.5rem; }
-    .feature-desc  { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+    .feature-item:last-child { border-bottom: none; }
+    .feature-glyph { font-size: 1.25rem; line-height: 1.4; }
+    .feature-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .feature-desc  { font-size: 0.9375rem; color: var(--muted); line-height: 1.6; margin: 0; }
 
     /* ── Steps ── */
     .steps { display: flex; flex-direction: column; position: relative; max-width: 560px; }
@@ -326,7 +328,6 @@
     @media (max-width: 768px) {
       .hero { grid-template-columns: 1fr; }
       .hero-strix-wrap { display: none; }
-      .features-grid { grid-template-columns: 1fr; }
       /* Hide in-page section anchors; keep external links (Docs, GitHub) */
       .nav-links li:has(a[href^="#"]) { display: none; }
     }
@@ -353,14 +354,16 @@
 <!-- Hero -->
 <div class="hero">
   <div>
-<h1>Never let a <span>certificate expire</span> again.</h1>
+<div class="hero-kicker">Self-hosted · Open source · Free</div>
+<h1>SSL certificate monitoring. <span>And then some.</span></h1>
   <div class="hero-copy-row">
   <div class="hero-strix-wrap">
     <img src="assets/strix.png" alt="" />
-  </div>  
+  </div>
   <p>
-    TLSentinel monitors your TLS certificates across every host, alerts you before they expire,
-    and gives you a clear view of your infrastructure's certificate health.
+    Never miss a certificate expiration again. TLSentinel scans every server you give it —
+    internal, private, or public — alerts you before anything expires, and grades the
+    security of every endpoint. Runs on your own infrastructure.
   </p>
 </div>
     <div class="hero-actions">
@@ -387,38 +390,49 @@
 <section id="features">
   <div class="section-inner">
     <div class="section-label">Features</div>
-    <h2 class="section-title">Everything you need to stay ahead of expiry.</h2>
-    <p class="section-sub">TLSentinel keeps a complete picture of your certificate inventory and gets out of your way.</p>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🔍</div>
-        <div class="feature-title">Distributed Scanner Agents</div>
-        <div class="feature-desc">Deploy lightweight scanner agents anywhere in your infrastructure. Each agent polls for assigned hosts, probes TLS endpoints, and ships results back to the server.</div>
+    <h2 class="section-title">Everything you need, in one place.</h2>
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-glyph">🌐</div>
+        <div>
+          <div class="feature-title">Distributed Scanner Agents</div>
+          <p class="feature-desc">Reach servers behind firewalls, on private networks, and in isolated environments. The scanner runs where you do.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔔</div>
-        <div class="feature-title">Expiry Alerts by Email</div>
-        <div class="feature-desc">Automatic email alerts at 30, 14, 7, and 1 day thresholds. Each threshold fires once per certificate — no alert storms, no duplicates.</div>
+      <div class="feature-item">
+        <div class="feature-glyph">🔔</div>
+        <div>
+          <div class="feature-title">Email Alerts</div>
+          <p class="feature-desc">Get warned before any certificate expires, with enough time to do something about it.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <div class="feature-title">Clean Dashboard</div>
-        <div class="feature-desc">A React dashboard gives you instant visibility into certificate status across all hosts — searchable, filterable, and role-aware.</div>
+      <div class="feature-item">
+        <div class="feature-glyph">🛡️</div>
+        <div>
+          <div class="feature-title">Security Posture Grading</div>
+          <p class="feature-desc">Each server gets a letter grade for its security configuration. Spot weak settings before they become incidents.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔐</div>
-        <div class="feature-title">OIDC + Local Auth</div>
-        <div class="feature-desc">Sign in with any OIDC provider (Entra ID, Google, Okta) or use local accounts. Role-based access controls who can manage vs. who can only view.</div>
+      <div class="feature-item">
+        <div class="feature-glyph">🔐</div>
+        <div>
+          <div class="feature-title">Single Sign-On</div>
+          <p class="feature-desc">Sign in with Entra ID, Google, Okta, or any OIDC provider. Local accounts work too. Role-based access controls who can manage vs. who can only view.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🗃️</div>
-        <div class="feature-title">Full Certificate Inventory</div>
-        <div class="feature-desc">Every certificate ever seen is stored and tracked — subject, SANs, issuer, fingerprint, and full chain. History is preserved across re-scans.</div>
+      <div class="feature-item">
+        <div class="feature-glyph">📜</div>
+        <div>
+          <div class="feature-title">Full Certificate Inventory</div>
+          <p class="feature-desc">Every certificate you've ever seen, with full history. Answer "what changed, when, and on which server" months later.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔌</div>
-        <div class="feature-title">REST API</div>
-        <div class="feature-desc">Every action available in the dashboard is also available through the REST API. Automate ingestion, query expiry status, and integrate with your existing tooling.</div>
+      <div class="feature-item">
+        <div class="feature-glyph">🔌</div>
+        <div>
+          <div class="feature-title">REST API</div>
+          <p class="feature-desc">Everything in the dashboard is also available through the API. Add servers, query status, integrate with your tooling.</p>
+        </div>
       </div>
     </div>
   </div>
